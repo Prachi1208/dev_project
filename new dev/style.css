@@ -1,0 +1,447 @@
+/* @import url(https://fonts.googleapis.com/css?family=Open+Sans); */
+/* @import url(https://fonts.googleapis.com/css?family=Bree+Serif); */
+*{
+  box-sizing: border-box;
+}
+*{
+  margin: 0;
+  padding: 0;
+}
+.first {
+  background-image: url(backg.jpeg);
+  /* background-size: 100%; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 200px;
+  line-height: 50px;
+  color: #ffffff;
+  margin: 0;
+  padding: 0;
+  word-wrap: break-word !important;
+  font-family: "Open Sans", sans-serif;
+}
+.image{
+    background-image: url(backg.jpeg);
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-top: 100px;
+  text-align: left;
+  
+  line-height: 100px;
+  font-family: "Bree Serif", "serif";
+}
+
+h3 {
+  font-size: 30px;
+  line-height: 34px;
+  text-align: center;
+  color: #fff;
+}
+
+h3 a {
+  color: #fff;
+}
+
+a {
+  color: #fff;
+}
+
+#container {
+  margin: 0 auto;
+  max-width: 890px;
+}
+
+p {
+  text-align: center;
+}
+
+.toggle,
+[id^="drop"] {
+  display: none;
+}
+
+/* Giving a background-color to the nav container. */
+nav {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+}
+
+#logo {
+  display: block;
+  padding: 0 30px;
+  float: left;
+  font-size: 20px;
+  line-height: 60px;
+}
+
+/* Since we'll have the "ul li" "float:left"
+ * we need to add a clear after the container. */
+
+nav:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Removing padding, margin and "list-style" from the "ul",
+ * and adding "position:reltive" */
+nav ul {
+  float: right;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  position: relative;
+}
+
+/* Positioning the navigation items inline */
+nav ul li {
+  margin: 0px;
+  display: inline-block;
+  float: left;
+  background-color: #000000;
+  
+}
+
+/* Styling the links */
+nav a {
+  display: block;
+  padding: 14px 20px;
+  color: #fff;
+  font-size: 17px;
+  text-decoration: none;
+}
+
+nav ul li ul li:hover {
+  background: #1c1b1b;
+}
+
+/* Background color change on Hover */
+nav a:hover {
+  background-color: #1c1b1b;
+}
+
+/* Hide Dropdowns by Default
+ * and giving it a position of absolute */
+nav ul ul {
+  display: none;
+  position: absolute;
+  /* has to be the same number as the "line-height" of "nav a" */
+  top: 60px;
+}
+
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+  display: inherit;
+}
+
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+  width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+}
+
+/* Second, Third and more Tiers	
+ * We move the 2nd and 3rd etc tier dropdowns to the left
+ * by the amount of the width of the first tier.
+*/
+nav ul ul ul li {
+  position: relative;
+  top: -60px;
+  /* has to be the same number as the "width" of "nav ul ul li" */
+  left: 170px;
+}
+
+/* Change ' +' in order to change the Dropdown symbol */
+li > a:after {
+  content: " +";
+}
+li > a:only-child:after {
+  content: "";
+}
+
+/* Media Queries
+--------------------------------------------- */
+
+@media all and (max-width: 768px) {
+  #logo {
+    display: block;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  nav {
+    margin: 0;
+  }
+
+  /* Hide the navigation menu by default */
+  /* Also hide the  */
+  .toggle + a,
+  .menu {
+    display: none;
+  }
+
+  /* Stylinf the toggle lable */
+  .toggle {
+    display: block;
+    background-color: #000000;
+    padding: 14px 20px;
+    color: #fff;
+    font-size: 17px;
+    text-decoration: none;
+    border: none;
+  }
+
+  .toggle:hover {
+    background-color: #000000;
+  }
+
+  /* Display Dropdown when clicked on Parent Lable */
+  [id^="drop"]:checked + ul {
+    display: block;
+  }
+
+  /* Change menu item's width to 100% */
+  nav ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul .toggle,
+  nav ul ul a {
+    padding: 0 40px;
+  }
+
+  nav ul ul ul a {
+    padding: 0 80px;
+  }
+
+  nav a:hover,
+  nav ul ul ul a {
+    background-color: #000000;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a,
+  nav ul ul ul a {
+    padding: 14px 20px;
+    color: #fff;
+    font-size: 17px;
+  }
+
+  nav ul li ul li .toggle,
+  nav ul ul a {
+    background-color: #212121;
+  }
+
+  /* Hide Dropdowns by Default */
+  nav ul ul {
+    float: none;
+    position: static;
+    color: #ffffff;
+    /* has to be the same number as the "line-height" of "nav a" */
+  }
+
+  /* Hide menus on hover */
+  nav ul ul li:hover > ul,
+  nav ul li:hover > ul {
+    display: none;
+  }
+
+  /* Fisrt Tier Dropdown */
+  nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul ul li {
+    position: static;
+    /* has to be the same number as the "width" of "nav ul ul li" */
+  }
+}
+<>
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f100;
+  padding: 10px;
+  flex: 50%;
+}
+
+.flex-item-right {
+  background-color: rgba(30, 143, 255, 0);
+  padding: 10px;
+  flex: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+img{
+  max-width: 90%;
+  height: auto;
+  
+}
+.second{
+  background-color:white;
+  color: #000000;
+  width: 100%;
+  height: min-content;
+  padding-left: 10em;
+  /* padding-top: 0px; */
+  /* padding-bottom:0px; */
+  /* height: min-content */
+  display: grid;
+  /* height: 100vh; */
+ 
+
+  /* background-color: rgb(255, 255, 255); */
+  /* place-items: top; */
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600");
+:root {
+  --bar-scale-y: 0;
+  --sparkle-color: rgb(253 244 215 / 40%);
+}
+
+@keyframes pop-word {
+  to {
+    transform: rotateX(0);
+  }
+}
+
+@keyframes show {
+  to {
+    opacity: 1;
+  }
+}
+@keyframes bar-scale {
+  to {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    transform: scale(0);
+  }
+
+  60% {
+    transform: scale(1) translate(4px, 1px) rotate(8deg);
+  }
+
+  100% {
+    transform: scale(0) translate(4px, 1px) rotate(8deg);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    text-shadow: 0 0 8px red;
+  }
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-family: "Playfair Display", Vidaloka, serif;
+  font-size: 10rem;
+
+  line-height: 0.85;
+  perspective: 500px;
+}
+.newheading1{
+  color: black;
+  font-size: 4em;
+  padding-left: 6rem;
+  padding-bottom: 0px;
+  }
+
+.newheading2{
+  color: black;
+  font-size: 5em;
+  
+}    
+.para2{
+  color: black;
+  padding-left: 6.1rem;
+}
+.para{
+  padding-top: 20px;
+}
+.word {
+  display: block;
+
+  animation: show 0.01s forwards, pop-word 1.5s forwards;
+  animation-timing-function: cubic-bezier(0.14, 1.23, 0.33, 1.16);
+  opacity: 0;
+
+  transform: rotateX(120deg);
+  transform-origin: 50% 100%;
+}
+.word:nth-of-type(2) {
+  padding: 0 2rem;
+
+  animation-delay: 1.5s;
+
+  color: rgb(197, 173, 36);
+}
+.templatecontainer{
+  background-color: white;
+  position: relative;
+ 
+}
+
+ol {
+  display: flex;
+  flex-direction: column;
+  margin-left: 100px;
+  ;
+}
+
+.list-item{
+  font-size: 60px;
+  font-weight: 300;
+  color: black;
+}
+
+.tlink{
+padding-left: 100px;
+margin-top: 50px;
+padding-bottom: 100px;
+}
+
+a{
+  font-size: 30px;
+}
+
+
+
+.thirddivh1{
+  color:black
+  
+}
+.three{
+  position: relative;
+  
+}
